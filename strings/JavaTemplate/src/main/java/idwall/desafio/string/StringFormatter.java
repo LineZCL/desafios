@@ -1,14 +1,16 @@
 package idwall.desafio.string;
 
+import java.util.List;
+
 /**
  * Created by Rodrigo Catão Araujo on 06/02/2018.
  */
 public abstract class StringFormatter {
 
-    private Integer limit;
+    protected Integer limit;
 
-    public StringFormatter() {
-        this.limit = 40;
+    public StringFormatter(Integer limit) {
+        this.limit = limit;
     }
 
     /**
@@ -17,5 +19,12 @@ public abstract class StringFormatter {
      * @param text
      * @return
      */
-    public abstract String format(String text);
+    public abstract String format(String text, boolean isJustify);
+
+    /**
+     * This return justified text
+     * @param line
+     * @return
+     */
+    public abstract void justify(LineFormat line);
 }

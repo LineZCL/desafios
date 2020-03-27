@@ -18,7 +18,7 @@ public class Main {
         String text = DEFAULT_INPUT_TEXT;
         Integer limit = DEFAULT_LIMIT;
         Boolean justify = DEFAULT_JUSTIFY;
-        switch (args.length) {
+        /**switch (args.length) {
             case 1:
                 text = args[0];
                 break;
@@ -42,8 +42,10 @@ public class Main {
 
         // Run IdwallFormatter
         final StringFormatter sf = new IdwallFormatter();
-        String outputText = sf.format(text);
+        String outputText = sf.format(text);**/
 
+        StringFormatter st = new IdwallFormatter(limit);
+        String outputText = st.format(text, true);
         // Print output text
         System.out.println("Output: ");
         System.out.println(outputText);
